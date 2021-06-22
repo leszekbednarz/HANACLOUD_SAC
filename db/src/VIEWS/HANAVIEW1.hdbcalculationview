@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="HANAVIEW1" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="HANAVIEW1"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="TLOG_F_C">
+    <resourceUri>TLOG_F_C</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="Index"/>
+      <viewAttribute id="ClientID"/>
+      <viewAttribute id="Name"/>
+      <viewAttribute id="Gender"/>
+      <viewAttribute id="Birthdate"/>
+      <viewAttribute id="Occupation"/>
+      <viewAttribute id="City"/>
+      <viewAttribute id="City_"/>
+      <viewAttribute id="latitude"/>
+      <viewAttribute id="longitude"/>
+      <viewAttribute id="OrderID"/>
+      <viewAttribute id="OrderDate"/>
+      <viewAttribute id="OrderYear" aggregationType="sum"/>
+      <viewAttribute id="OrderPrice" aggregationType="sum"/>
+      <viewAttribute id="OrderPay" aggregationType="sum"/>
+      <viewAttribute id="No_OrderItems" aggregationType="sum"/>
+      <viewAttribute id="ProductName"/>
+      <viewAttribute id="ItemCategory"/>
+      <viewAttribute id="ItemPrice" aggregationType="sum"/>
+      <viewAttribute id="ItemSoldPrice" aggregationType="sum"/>
+      <viewAttribute id="ItemDiscount" aggregationType="sum"/>
+      <viewAttribute id="No_Item" aggregationType="sum"/>
+      <viewAttribute id="ItemTotalSoldPrice" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="TLOG_F_C">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Index" source="Index"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ClientID" source="ClientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Name" source="Name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Gender" source="Gender"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Birthdate" source="Birthdate"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Occupation" source="Occupation"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="City" source="City"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="City_" source="City_"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="latitude" source="latitude"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="longitude" source="longitude"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OrderID" source="OrderID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OrderDate" source="OrderDate"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OrderYear" source="OrderYear"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OrderPrice" source="OrderPrice"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OrderPay" source="OrderPay"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="No_OrderItems" source="No.OrderItems"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ProductName" source="ProductName"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ItemCategory" source="ItemCategory"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ItemPrice" source="ItemPrice"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ItemSoldPrice" source="ItemSoldPrice"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ItemDiscount" source="ItemDiscount"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="No_Item" source="No.Item"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ItemTotalSoldPrice" source="ItemTotalSoldPrice"/>
+    </input>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Union_1">
+  <attributes>
+    <attribute id="Index" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Index"/>
+      <keyMapping columnObjectName="Union_1" columnName="Index"/>
+    </attribute>
+    <attribute id="ClientID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ClientID"/>
+      <keyMapping columnObjectName="Union_1" columnName="ClientID"/>
+    </attribute>
+    <attribute id="Name" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name"/>
+      <keyMapping columnObjectName="Union_1" columnName="Name"/>
+    </attribute>
+    <attribute id="Gender" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Gender"/>
+      <keyMapping columnObjectName="Union_1" columnName="Gender"/>
+    </attribute>
+    <attribute id="Birthdate" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Birthdate"/>
+      <keyMapping columnObjectName="Union_1" columnName="Birthdate"/>
+    </attribute>
+    <attribute id="Occupation" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Occupation"/>
+      <keyMapping columnObjectName="Union_1" columnName="Occupation"/>
+    </attribute>
+    <attribute id="City" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="City"/>
+      <keyMapping columnObjectName="Union_1" columnName="City"/>
+    </attribute>
+    <attribute id="City_" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="City_"/>
+      <keyMapping columnObjectName="Union_1" columnName="City_"/>
+    </attribute>
+    <attribute id="latitude" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="latitude"/>
+      <keyMapping columnObjectName="Union_1" columnName="latitude"/>
+    </attribute>
+    <attribute id="longitude" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="longitude"/>
+      <keyMapping columnObjectName="Union_1" columnName="longitude"/>
+    </attribute>
+    <attribute id="OrderID" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OrderID"/>
+      <keyMapping columnObjectName="Union_1" columnName="OrderID"/>
+    </attribute>
+    <attribute id="OrderDate" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OrderDate"/>
+      <keyMapping columnObjectName="Union_1" columnName="OrderDate"/>
+    </attribute>
+    <attribute id="ProductName" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ProductName"/>
+      <keyMapping columnObjectName="Union_1" columnName="ProductName"/>
+    </attribute>
+    <attribute id="ItemCategory" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ItemCategory"/>
+      <keyMapping columnObjectName="Union_1" columnName="ItemCategory"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="OrderYear" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="OrderYear"/>
+      <measureMapping columnObjectName="Union_1" columnName="OrderYear"/>
+    </measure>
+    <measure id="OrderPrice" order="14" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="OrderPrice"/>
+      <measureMapping columnObjectName="Union_1" columnName="OrderPrice"/>
+    </measure>
+    <measure id="OrderPay" order="15" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="OrderPay"/>
+      <measureMapping columnObjectName="Union_1" columnName="OrderPay"/>
+    </measure>
+    <measure id="No_OrderItems" order="16" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="No_OrderItems"/>
+      <measureMapping columnObjectName="Union_1" columnName="No_OrderItems"/>
+    </measure>
+    <measure id="ItemPrice" order="19" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ItemPrice"/>
+      <measureMapping columnObjectName="Union_1" columnName="ItemPrice"/>
+    </measure>
+    <measure id="ItemSoldPrice" order="20" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ItemSoldPrice"/>
+      <measureMapping columnObjectName="Union_1" columnName="ItemSoldPrice"/>
+    </measure>
+    <measure id="ItemDiscount" order="21" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ItemDiscount"/>
+      <measureMapping columnObjectName="Union_1" columnName="ItemDiscount"/>
+    </measure>
+    <measure id="No_Item" order="22" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="No_Item"/>
+      <measureMapping columnObjectName="Union_1" columnName="No_Item"/>
+    </measure>
+    <measure id="ItemTotalSoldPrice" order="23" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ItemTotalSoldPrice"/>
+      <measureMapping columnObjectName="Union_1" columnName="ItemTotalSoldPrice"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="90" y="214"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

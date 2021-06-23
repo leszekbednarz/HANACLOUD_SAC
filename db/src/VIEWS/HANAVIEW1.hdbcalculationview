@@ -36,7 +36,7 @@
       <viewAttribute id="ItemTotalSoldPrice" aggregationType="sum"/>
     </viewAttributes>
     <calculatedViewAttributes/>
-    <input node="TLOG_F_C">
+    <input node="TLOG_F_C" emptyUnionBehavior="NO_ROW">
       <mapping xsi:type="Calculation:AttributeMapping" target="Index" source="Index"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="ClientID" source="ClientID"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="Name" source="Name"/>
@@ -67,7 +67,7 @@
 <logicalModel id="Union_1">
   <attributes>
     <attribute id="Index" order="1" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Index"/>
+      <descriptions defaultDescription="IndexA"/>
       <keyMapping columnObjectName="Union_1" columnName="Index"/>
     </attribute>
     <attribute id="ClientID" order="2" displayAttribute="false" attributeHierarchyActive="false">

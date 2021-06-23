@@ -67,7 +67,7 @@
 <logicalModel id="Union_1">
   <attributes>
     <attribute id="Index" order="1" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="IndexA"/>
+      <descriptions defaultDescription="IndexB"/>
       <keyMapping columnObjectName="Union_1" columnName="Index"/>
     </attribute>
     <attribute id="ClientID" order="2" displayAttribute="false" attributeHierarchyActive="false">
